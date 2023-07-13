@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style type="text/css">
+      div {
+        margin: 32px 0;
+      }
+      .input {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        transition: border-color 0.25s;
+        background-color: transparent;
+        font-size: 20px;
+      }
+      .input:focus {
+        outline: none;
+        border-bottom-color: #777;
+      }
+      .input::placeholder {
+        color: transparent;
+        user-select: none;
+      }
+      .label {
+        position: absolute;
+        top: 32px;
+        left: 16px;
+        color: #ddd;
+        pointer-events: none;
+        transform-origin: top left;
+        transition: transform 0.25s;
+      }
+      .input:focus + .label,
+      .input:not(:placeholder-shown) + .label {
+        transform: translateY(-100%) scale(0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input
+        type="text"
+        placeholder="Name"
+        class="input"
+        id="name"
+        autocomplete="off"
+      />
+      <label class="label" for="name">Name</label>
+    </div>
+  </body>
+</html>
