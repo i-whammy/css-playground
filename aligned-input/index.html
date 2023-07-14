@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style type="text/css">
+      div {
+        width: 100px;
+        margin-bottom: 8px;
+      }
+      .flex-div {
+        display: flex;
+      }
+      .baseline {
+        align-items: baseline;
+      }
+      .center {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="flex-div baseline">
+        <input type="radio" id="radio1" />
+        <label for="radio1">このラベルの位置は、先頭部分とラジオボタンとで高さを揃えています。</label>
+        </label>
+      </div>
+      <div class="flex-div center">
+        <input type="radio" id="radio2" />
+        <label for="radio2">このラベルの位置は、中心部分とをラジオボタンとで高さを揃えています。</label>
+        </label>
+      </div>
+      <div class="flex-div rowreverse">
+        <input type="radio" id="radio2" />
+        <label for="radio2">このラベルの位置は、中心部分とをラジオボタンとで高さを揃えています。</label>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- ref: https://twitter.com/argyleink/status/1442546818114473984 -->
