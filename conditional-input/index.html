@@ -29,12 +29,39 @@
         font-size: 16px;
         color: #4f4f4f;
       }
+
+      #address-tooltip {
+        border-radius: 4px;
+        padding: 4px 12px;
+        display: none;
+        position: relative;
+        top: 32px;
+        left: -213px;
+        background-color: #ff2222;
+        color: white;
+        font-size: 12px;
+      }
     </style>
   </head>
   <body>
     <div id="address-container">
       <label for="address" id="address-label">住所</label>
       <input type="text" placeholder="例）東京都千代田区" id="address" />
+      <label for="address" id="address-tooltip">住所が入力されていません</label>
     </div>
+    <script>
+      const address = document.getElementById("address");
+      const tooltip = document.getElementById("address-tooltip");
+      address.addEventListener("focus", (e) => {
+        e.preventDefault();
+        if (!address.value) {
+          tooltip.style.display = "inline";
+        }
+      });
+      address.addEventListener("focusout", (e) => {
+        e.preventDefault();
+        tooltip.style.display = "none";
+      });
+    </script>
   </body>
 </html>
