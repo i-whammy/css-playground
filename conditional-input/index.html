@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style type="text/css">
+      #address-container {
+        display: flex;
+        align-items: center;
+      }
+      #address {
+        border: 1px solid #999999;
+        border-radius: 4px;
+        line-height: 2rem;
+        font-size: 16px;
+        outline: none;
+        transition: box-shadow 0.5s;
+      }
+
+      #address:focus {
+        box-shadow: 0px 0px 2px #888888;
+      }
+
+      ::placeholder {
+        color: #cccccc;
+      }
+
+      #address-label {
+        padding-left: 4px;
+        padding-right: 12px;
+        line-height: 2rem;
+        font-size: 16px;
+        color: #4f4f4f;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="address-container">
+      <label for="address" id="address-label">住所</label>
+      <input type="text" placeholder="例）東京都千代田区" id="address" />
+    </div>
+  </body>
+</html>
